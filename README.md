@@ -1,19 +1,25 @@
-# 🎈 Blank app template
+# Statement2Sheet
 
-A simple Streamlit app template for you to modify!
+Statement2Sheet adalah aplikasi web yang dibangun dengan Streamlit untuk mengubah tabel laporan dalam format PDF berpassword menjadi format Excel (.xlsx). Aplikasi ini menggunakan library Python seperti PyPDF2 untuk membuka PDF yang terpassword dan Camelot untuk mengekstrak tabel dari file PDF.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+## Fitur
 
-### How to run it on your own machine
+- **Mendukung file PDF berpassword**: Aplikasi ini dapat membuka dan mendekripsi file PDF yang dilindungi dengan password.
+- **Ekstraksi tabel**: Menyediakan fitur untuk mengekstrak tabel dari file PDF dan menyimpannya ke dalam format Excel.
+- **Antarmuka pengguna yang sederhana**: Antarmuka intuitif yang memudahkan pengguna untuk mengunggah file dan melakukan konversi.
 
-1. Install the requirements
+## Prasyarat
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+Sebelum menjalankan aplikasi ini, pastikan Anda telah menginstal paket-paket berikut:
 
-2. Run the app
+- Python 3.6+
+- Streamlit
+- PyPDF2
+- Camelot
+- Pandas
+- OpenPyXL
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+Anda dapat menginstal semua dependensi dengan menjalankan perintah berikut:
+
+```bash
+pip install streamlit PyPDF2 camelot-py pandas openpyxl
