@@ -36,14 +36,14 @@ def unlock_pdf(pdf_file, password):
 # Function to extract tables from PDF
 def extract_statement(pdf_file):
     try:
-        tables = camelot.read_pdf(pdf_file, pages='all', flavor='stream', split_text=True, snap_tolerance=1)
+        tables = camelot.read_pdf(pdf_file, pages='all', flavor='stream',row_tol=30)
         extracted_data = []
 
         for table in tables:
             df = table.df
             if df.shape[1] >= 5:  # At least 5 columns
                 df.columns = df.iloc[0]  # Use first row as header
-                df = df[2:]  # Data starts from the third row
+                df = df[1:]  # Data starts from the second row
                 df.reset_index(drop=True, inplace=True)
                 extracted_data.append(df)
 
